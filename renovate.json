@@ -6,54 +6,6 @@
   "enabledManagers": [
     "npm"
   ],
-  "transitiveRemediation": true,
-  "semanticCommits": "enabled",
-  "semanticCommitScope": "{{prettyDepType}}",
-  "automergeType": "branch",
-  "timezone": "America/New_York",
-  "schedule": [
-    "after 10pm every weekday",
-    "before 5am every weekday",
-    "every weekend"
-  ],
-  "internalChecksFilter" : "strict",
-  "packageRules": [
-    {
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
-      "groupName": "devDependencies (non-major)",
-      "groupSlug": "dev-dependencies",
-      "automerge": true
-    },
-    {
-      "matchPackageNames": [
-        "@equinox-platformx/core-common"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
-      "automerge": true
-    },
-    {
-      "matchPackageNames": [
-        "node"
-      ],
-      "enabled": false
-    }
-  ],
-  "npm": {
-    "stabilityDays": 3
-  },
   "encrypted": {
     "npmToken": "wcFMA/xDdHCJBTolAQ/9HsJK/fHXxSLcLnSO/JpGqhKdCXis9XTAb40RB74BzJFi2aBBuwvWuEygkAw0LFKBnPTw9+dCwn0bd4+X5Svu7n0ggMnR5gIsDtQ8BBtUjdLQOwdZpg/DuiB0ON8vZdpLzS+T/ewB/lQZu+DTvBocfKuatJ9g8UQt2ueoWWgb+GVhcFdeCUQvBZbIqBFkTKd5qWKSs1oUGNU6/BJx4l206DV5fdtuHmE5nye5Nuy4IsGI/2KCTPtnco68viiwb0nGPnQpUqWkfebYrxV3x6oxcadFc5q0eQYzUN2ND6FnhXo5RZ7YmiiQ3cwy6Xsi0doaI56RGEaTzdOXcf2DWAgpY987S7Vcoc+NoENP4R6UjeIi+AkkBl+s4alIRiXZRbTul7trPt7Q87EQo37Gd9j7wv1IgQVVgLQyYVeZU8nKsqWWa8fo0yYm5Qbrrykjc9FBHLiIKz933p4daNk4D3Y2AXGEnSc4Y1o4o96E0wvQWXn+hj/2FW8yZQDHErIueimFm28FXpEjzQx5ZaObb/WtwP89yHwMLOs2g+gZNDHN6Cv8OgzX50t7I2CUme8LcQv3WqCj2Ong+hs/PwN1ahNEe+6Abs2qH/TGQ/IYInocAJp8Lsi4mFLhr9ZgOlWjnHGcv6NV2KbKaKZCh2keZOLxIvFv2htnD20Nl+2lj3ZmQFvSeAHy07N+ESAf2cIXAHgpjFhGRyOJxJu/uk06htZfD6h8lDE/SZFZUC6RP7EFn2xK00WpcH1IRReMAMpchEgneB2ZdsLC/kEDUCgEIRNZx3UetcY5X8RYx2Ak/e5uYqHMwfjRGX48kRIP9gZOAhR4KNZgSpcqpDol4w"
   },
