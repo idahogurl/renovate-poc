@@ -20,7 +20,7 @@
     "core-common": "npm:@equinox-platformx/core-common@^2.49.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "8.20.0",
     "prettier": "^1.9.2",
     "prettier-eslint": "^14.1.0"
   }
