@@ -1,0 +1,60 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "enabledManagers": [
+    "npm"
+  ],
+  "transitiveRemediation": true,
+  "semanticCommits": "enabled",
+  "semanticCommitScope": "{{prettyDepType}}",
+  "automergeType": "branch",
+  "timezone": "America/New_York",
+  "schedule": [
+    "after 10pm every weekday",
+    "before 5am every weekday",
+    "every weekend"
+  ],
+  "internalChecksFilter" : "strict",
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "groupName": "devDependencies (non-major)",
+      "groupSlug": "dev-dependencies",
+      "automerge": true
+    },
+    {
+      "matchPackageNames": [
+        "@equinox-platformx/core-common"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    },
+    {
+      "matchPackageNames": [
+        "node"
+      ],
+      "enabled": false
+    }
+  ],
+  "npm": {
+    "stabilityDays": 3
+  },
+  "encrypted": {
+    "npmrc": "wcFMA/xDdHCJBTolAQ//b8dy608jvWQjnak79f/yLra9MNnelvdLOb7aZNN2txTFAZKk0GoPeHS/4lvfcg4ha83jkOwqy5T45ndMF8nzo6htZIworjvBGxuNgNIon6qsSysTW9Cy2jWUaqw2txPr5AtGsPM+giVTVVQbxkEXnFFHjO70A3rea5dJzT8CprASWkRYLb2IvAwwmYu5nrQ3mF6lEX+EeREc+UvU/LZRiM9xfu+5uEXXuICqN1xO2URLpdqgyc26VnS71o0yPWPsELjCoD47z5vE3k5Fgs6lV/wwqp7fiwAkYPpoTfm6l1re/C7WOYYMkD1+jzfBfwTvutXFZ8YZheKnzeuA0Zwj0f9gcy7VNFUu2TCZ0e4LwfAJFzngEfOiI4DHe//A69pJN7/egMlpjbF9FIrHOsataasr90q7CwEpgzV66p4Dlsg3322mVZIosf2acWytNnfJXOLV7qbLp05zEUZtA4fUDz4Ueb8ZvdrjLrbhqPzOqIUmhk2KL5Ex34JnXAH8ajNzZB3qHSTVkFjf/rtFdZf292sxcouxSkvcteNj8sOF2bV/VpJaeZGYX+o2TbaMz0iJExoginRV2xW2IOqOTvNz8YIciBw5hpRdtcULp10CNzlq9L+DutVCD1M0O3WygvQpQjiqsemJ6ReETdUiKwjxlmmZTcR5DSF5fB92n6XGm+3SwBIBAnf9ribZfZZP452EYOxgcoaYQ/L0KNr0ROP31oboWOui4I+L0cQnU3Xs6HCeR6d3ve0w+DLsFR8bTaqlcOegGX7d8mkZl4UnVKQGMUvl/Ev7ifRhvwSUs3vlfADegtAwBtJdprx8tnV2N6JKd69CWq3oQbyr7TOvl46iWvzyW7hliiOqplXTp9DNF2Ild+6GbrIyxesUgkh80yT4ADQpoKUmvpVPhDAFxWwkDeRHvT7CnirMyGoJEfT+u0DijuZKGJZUGhVHiJYdXkEIf4cgsio"
+  }
+}
