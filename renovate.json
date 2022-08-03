@@ -2,5 +2,59 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
-  ]
+  ],
+  "enabledManagers": [
+    "npm"
+  ],
+  "transitiveRemediation": true,
+  "semanticCommits": "enabled",
+  "semanticCommitScope": "{{prettyDepType}}",
+  "automergeType": "branch",
+  "timezone": "America/New_York",
+  "schedule": [
+    "after 10pm every weekday",
+    "before 5am every weekday",
+    "every weekend"
+  ],
+  "internalChecksFilter" : "strict",
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "groupName": "devDependencies (non-major)",
+      "groupSlug": "dev-dependencies",
+      "automerge": true
+    },
+    {
+      "matchPackageNames": [
+        "@equinox-platformx/core-common"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    },
+    {
+      "matchPackageNames": [
+        "node"
+      ],
+      "enabled": false
+    }
+  ],
+  "npm": {
+    "stabilityDays": 3
+  },
+  "encrypted": {
+    "npmrc": "wcFMA/xDdHCJBTolAQ//S+lnVCTSpC7sKQ1u0KX/pYDay2hdNBGkLy2NdFKDDvT8Q32RLebWn7mkcpiXCOFYQuyfUMGIBfgLavdsFk6cQLRX8NvwkevrpEddMK4Z6DUIV9pXTrohxXRaMOpoFt/Hn6ieq41TQt0Ztk2Nd4IGgSQiKANLvrbftUhRjNqNBoGDvuKUOoe0gyOPJWlSf6Z1sLZyZh0rtiLOO/buPMU8CMv9m8yFpYS0hB+aHwqAoPM0whRH7YevO6fBzjrl2jVzHuPx2wFa4CqH29IJW/pnHJ8O091fhjENi/L+R3R2kZEYv1mrdAeCWOx2/iUzU4lp7bafvZ3z36MQwyRKHBwRJqsPCFPumMz1Dj1crHf47AsiY0IRP/F7KosduRIPrjF95nOwejWsPsIH6k+AGeEIkxGwGlqVn9AiTlg2b6uITq9GXCmqtM5dtX6g4jXO2EwCroG1KBWquvoVPXSLhivEO+J0jfyJyDih/3LjflVifFq8ZN+tu4jfFkQ/o/jDRievmFi/NRKrjjarmDebSSDl/NIZj3/dCiwR8Du4fT+KtS8wbu7UZXi5wULK5E9Xz3mBY63yYljwZtdcyte23iBbObwtlEQxr4NBj4za+R8ZiaMFYQynBP9sbqUuu2U0AoG8d7vOWsc2MQcVt5iSvctwgr+6efyCvBF18TeF+xwaB8nSwBoBNqeZ9wTy5Qzn0I3zpQHt9ANM1EAmjlO9K7RiJGEz1/T7byjwlFFLjAlsTm9ILgiM1q4D6QGUvb7spFYoFU2yqxUQGWZ8YPKxmkmQDcUz1xxBTCjS9SJZzM3Sl1yCLX5KbAJtUpyOnRWHDFt5vIdDULBQOXShjZ3GfwSnjdVOcowVzTG6ar92+KsXsXsHuUGISfJWAKHzdE4HJHgNdOe+55r/ogBeU0h7d8ljnyOyLyd1ZULRxsCT4r/2DCZ3ck+uCcYCEfe4G1IFTiITTwqZen/TtBxma3oGzA"
+  }
 }
