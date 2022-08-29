@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/idahogurl/renovate-poc#readme",
   "dependencies": {
-    "core-common": "npm:@equinox-platformx/core-common@2.49.0"
+    "core-common": "npm:@equinox-platformx/core-common@2.51.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
